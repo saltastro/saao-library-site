@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+
+{% block page_content%}
+
+
+    <div class="container text_align=center">
+
+        <form class="form form-horizontal" method="POST"  name="login">
+
+
+            <div class="jumbotron">
+                <h1>library publications</h1>
+            </div>
+
+
+            {% for message in get_flashed_messages()%}
+            <div class="alert alert-warning alert-dismissible" role="alert">
+
+
+                <strong>{{message}} </strong>
+            </div>
+            {% endfor %}
+
+
+            <h2 >Please login</h2>
+
+                     {{ form.hidden_tag() }}
+            <div>
+                     {{form.username.label}} {{form.username}}
+                <ul>
+                         {% for error in form.username.errors%}
+                          <li style="color:red">{{error}}</li>
+                        {%endfor%}
+                </ul>
+            </div>
+
+            <div>
+                {{form.password.label}}  {{form.password}}
+                   <ul>
+                      {% for error in form.password.errors%}
+                         <li style="color:red">{{error}}</li>
+                      {%endfor%}
+                   </ul>
+                {{form.remember}} {{ form.remember.label}}
+                  <br>
+            </div>
+                  <br>
+
+
+                 <input class="btn btn-primary" type="submit" value="LOGIN">
+
+        </form>
+    </div>
+{% endblock%}

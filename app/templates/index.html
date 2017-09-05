@@ -1,0 +1,70 @@
+
+
+{%extends 'base.html'%}
+{% block page_content%}
+
+
+
+
+<div class="container text_align=center">
+
+    <form action="" method="POST" name="search">
+
+        <div class="jumbotron">
+            <h1>library publications</h1>
+
+        </div>
+
+
+        {%for message in  get_flashed_messages() %}
+
+
+            {% if form.start_date.data > form.end_date.data%}
+                <div class="alert alert-warning">
+                     <strong> {{message}}</strong>
+                </div>
+           {% else %}
+
+            <div class="alert alert-success">
+
+                 <strong>{{ message}}</strong>
+            </div>
+            {% endif %}
+        {% endfor %}
+
+        <br>
+        <br>
+                {{ form.hidden_tag() }}
+        <div>
+
+               {{form.start_date.label}} {{form.start_date}}
+            <ul>
+                    {% for error in form.start_date.errors%}
+                <li style="color:red">{{error}}</li>
+                    {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            {{form.end_date.label}}  {{form.end_date}}
+            <ul>
+                {% for error in form.end_date.errors%}
+
+                {% endfor %}
+            </ul>
+            <br>
+        </div>
+
+        <input type="submit" value="send email"> <br> <br>
+
+        <ul type='topnav'>
+            <a href="{{url_for('logout')}}"> log out</a>
+        </ul>
+
+    </form>
+</div>
+{% endblock %}
+
+
+
+
