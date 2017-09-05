@@ -1,0 +1,23 @@
+h1{
+ text-align: center;
+ color : black;
+ font-size: 400%;
+ font-style: normal;
+ font-weight: bolder;
+ text-align: right;
+ text-color:blue;
+}
+body{
+  text-align:center;
+  background-color:whitedust;
+}
+
+.jumbotron{
+   margin-top:20px
+   background-size:cover;
+   background-image: url(logo.png);
+   image-position:fixed;
+   background-repeat: no-repeat;
+   background-position: 5% 5%;
+
+}
