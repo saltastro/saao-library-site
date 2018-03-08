@@ -19,9 +19,6 @@ body{
    background-repeat: no-repeat;
    background-position: 5% 5%;
    text-align: center;
+   padding-top: 60px;
 
-}
-.container{
-    padding-top: 60px;
-    background-color: yellow;
 }
