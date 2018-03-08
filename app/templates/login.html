@@ -3,17 +3,15 @@
 
 {% block page_content%}
 
+        <div class="jumbotron">
+                <h1>Library Publications</h1>
+        </div>
 
     <div class="container text_align=center">
 
         <form class="form form-horizontal" method="POST"  name="login">
 
-
-            <div class="jumbotron">
-                <h1>library publications</h1>
-            </div>
-
-
+            <div class="container">
             {% for message in get_flashed_messages()%}
             <div class="alert alert-warning alert-dismissible" role="alert">
 
@@ -42,14 +40,12 @@
                          <li style="color:red">{{error}}</li>
                       {%endfor%}
                    </ul>
-                {{form.remember}} {{ form.remember.label}}
-                  <br>
             </div>
                   <br>
 
-
                  <input class="btn btn-primary" type="submit" value="LOGIN">
-
+            </div>
         </form>
+
     </div>
 {% endblock%}

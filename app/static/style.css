@@ -4,8 +4,7 @@ h1{
  font-size: 400%;
  font-style: normal;
  font-weight: bolder;
- text-align: right;
- text-color:blue;
+
 }
 body{
   text-align:center;
@@ -19,5 +18,10 @@ body{
    image-position:fixed;
    background-repeat: no-repeat;
    background-position: 5% 5%;
+   text-align: center;
 
+}
+.container{
+    padding-top: 60px;
+    background-color: yellow;
 }
