@@ -5,16 +5,13 @@
 
 
 
+ <div class="jumbotron">
+            <h1>library publications</h1>
 
+ </div>
 <div class="container text_align=center">
 
     <form action="" method="POST" name="search">
-
-        <div class="jumbotron">
-            <h1>library publications</h1>
-
-        </div>
-
 
         {%for message in  get_flashed_messages() %}
 
@@ -33,6 +30,8 @@
         {% endfor %}
 
         <br>
+        <h2> Please enter the date of the publications. </h2>
+
         <br>
                 {{ form.hidden_tag() }}
         <div>
@@ -58,7 +57,7 @@
         <input type="submit" value="send email"> <br> <br>
 
         <ul type='topnav'>
-            <a href="{{url_for('logout')}}"> log out</a>
+            <a href="{{url_for('logout')}}" class="btn btn-primary"> log out</a>
         </ul>
 
     </form>

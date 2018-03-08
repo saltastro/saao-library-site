@@ -16,15 +16,19 @@ def load_user(id):
 
 
 '''
-  Login and validate the user on a client side form
+   Login and validate the user on a client side form
 
-  when the user clicks on a submit button data is validated
-  if data is incorrect the user stays on the same page then a message is flashed to tell thee user to correct 
-  the details
-  unless its correct then login to the next page.
-
+   When the user clicks on a submit button data is validated
+   ldap authentication used to verify user details from the server
+   
+  Returns: 
+        
+        If the user details are correct when verified by server using elap:
+            directed to the next page called index page
+        else
+             user stays in the same page
 '''
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
     form=LoginForm()
 
@@ -93,7 +97,7 @@ def index():
         else:
             t = Thread(target=run_pub, args=(form.start_date.data, form.end_date.data))
             t.start()
-            flash('email will be sent soon')
+            flash('Email will be sent soon')
 
     return render_template('index.html', form=form)
 
