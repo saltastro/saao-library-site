@@ -1,24 +1,35 @@
 h1{
  text-align: center;
- color : black;
- font-size: 400%;
+ color : white;
+ font-size: 500%;
  font-style: normal;
  font-weight: bolder;
+}
 
+.page-header{
+  background-image: url(logo.png);
+  background-size:200px 70px;
+  background-attachment:fixed;
+  background-position: 5% 5%;
+  background-repeat: no-repeat;
+  border-bottom: none;
+  background-size:;
 }
 body{
   text-align:center;
-  background-color:whitedust;
+  background-repeat: no-repeat;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  color:#F5F5F5;
 }
+.container {
+   padding-right: 15px;
+   padding-left: 0px;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 50px
 
-.jumbotron{
-   margin-top:20px
-   background-size:cover;
-   background-image: url(logo.png);
-   image-position:fixed;
-   background-repeat: no-repeat;
-   background-position: 5% 5%;
-   text-align: center;
-   padding-top: 60px;
-
+}
+input{
+  color: black;
 }
