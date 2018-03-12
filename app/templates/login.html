@@ -3,9 +3,7 @@
 
 {% block page_content%}
 
-        <div class="jumbotron">
-                <h1>Library Publications</h1>
-        </div>
+
 
     <div class="container text_align=center">
 
@@ -23,9 +21,13 @@
 
             <h2 >Please login</h2>
 
+                <br>
+
                      {{ form.hidden_tag() }}
             <div>
-                     {{form.username.label}} {{form.username}}
+                     {{form.username.label}}
+                <br>
+                    {{form.username}}
                 <ul>
                          {% for error in form.username.errors%}
                           <li style="color:red">{{error}}</li>
@@ -34,7 +36,9 @@
             </div>
 
             <div>
-                {{form.password.label}}  {{form.password}}
+                {{form.password.label}}
+                <br>
+                {{form.password}}
                    <ul>
                       {% for error in form.password.errors%}
                          <li style="color:red">{{error}}</li>

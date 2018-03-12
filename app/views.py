@@ -97,7 +97,7 @@ def index():
         else:
             t = Thread(target=run_pub, args=(form.start_date.data, form.end_date.data))
             t.start()
-            flash('Email will be sent soon')
+            flash('Email will be sent, please check your emails')
 
     return render_template('index.html', form=form)
 
